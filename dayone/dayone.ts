@@ -1,6 +1,6 @@
 import { file } from "bun";
 
-const data = await file("./dayone.txt").text();
+const data = await file(import.meta.dir + "/dayone.txt").text();
 
 function isNumber(n: string): boolean {
 	return !isNaN(parseInt(n));
