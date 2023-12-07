@@ -1,15 +1,3 @@
-# typescript-aoc
-
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.15. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Attempting the Advent of Code 2023 in TypeScript
+### Day 1 - ✅ Done
+### Day 2 - 🚧 In Progress
