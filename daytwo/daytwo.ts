@@ -4,14 +4,10 @@ const text = await file(`${import.meta.dir}/daytwo.txt`).text();
 
 const daytwo = text.split("\n");
 
-const RED = 12;
-const GREEN = 13;
-const BLUE = 14;
-
-const colors = {
-	red: RED,
-	green: GREEN,
-	blue: BLUE,
+const colors: { [key: string]: number } = {
+	red: 12,
+	green: 13,
+	blue: 14,
 };
 
 function parseData(sets: string[] | undefined): boolean {
@@ -24,24 +20,8 @@ function parseData(sets: string[] | undefined): boolean {
 			const [number, color] = cube.split(" ");
 			const num = parseInt(number);
 
-			switch (color) {
-				case "red":
-					if (num > colors.red) {
-						return false;
-					}
-					break;
-				case "green":
-					if (num > colors.green) {
-						return false;
-					}
-					break;
-				case "blue":
-					if (num > colors.blue) {
-						return false;
-					}
-					break;
-				default:
-					break;
+			if (num > colors[color]) {
+				return false;
 			}
 		}
 	}
